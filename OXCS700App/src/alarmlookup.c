@@ -3,14 +3,14 @@
 
 #include <dbDefs.h>
 #include <registryFunction.h>
-#include <genSubRecord.h>
+#include <aSubRecord.h>
 #include <epicsExport.h>
 #include <alarm.h>
 #include <recGbl.h>
 
-typedef long (*processMethod)(genSubRecord *precord);
+typedef long (*processMethod)(aSubRecord *precord);
 
-static long alarmlookupProcess(genSubRecord *p)
+static long alarmlookupProcess(aSubRecord *p)
 {
 	/* lookup a string from an int value */
 	int lookupval = *(int *)p->a;
